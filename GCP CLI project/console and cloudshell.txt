@@ -1,0 +1,33 @@
+gsutil mb gs://cliqwiklabs-gcp-02-d1a13106bfd0;
+
+gsutil mb gs://testqwiklabs-gcp-02-d1a13106bfd0
+
+gsutil cp 'chinua switch.jpg' gs://cliqwiklabs-gcp-02-d1a13106bfd0
+
+gcloud compute regions list
+
+INFRACLASS_REGION=us-central1 mkdir infraclass
+
+touch infraclass/config
+
+echo INFRACLASS_REGION=$INFRACLASS_REGION >> ~/infraclass/config
+
+INFRACLASS_PROJECT_ID=qwiklabs-gcp-02-d1a13106bfd0
+
+echo INFRACLASS_PROJECT_ID=$INFRACLASS_PROJECT_ID >> ~/infraclass/config
+
+cat infraclass/config
+
+source infraclass/config
+
+echo INFRACLASS_PROJECT_ID
+
+exit
+
+echo INFRACLASS_PROJECT_ID
+
+nano .profile
+
+source infraclass/config
+
+echo $INFRACLASS_PROJECT_ID
